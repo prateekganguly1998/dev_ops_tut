@@ -42,6 +42,7 @@ jobs:
           DEBUG: ${{secrets.DEBUG}}
           JWT_SECRET_KEY: ${{secrets.JWT_SECRET_KEY}}
           DATABASE_URL: ${{secrets.DATABASE_URL}}
+          FLASK_APP: runserver.py
       run: |
         pytest
     - name: Deploy with Heroku
