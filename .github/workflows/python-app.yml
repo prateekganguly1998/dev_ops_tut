@@ -36,8 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        export SECRET_KEY '539c578978c2fed91113d896f1d6b09c17b8e473d4bc2254c9ba6c16a9568e3a'
-        export DEBUG True
-        export JWT_SECRET_KEY 'c457690c111152b57157e0fb'
-        export DATABASE_URL 'postgres://ehxlysmxwjwuau:92a571a764b03a940c0946b3e958b214d63844444b5202e33d2ce579701e72e6@ec2-54-147-33-38.compute-1.amazonaws.com:5432/deshnrtleg1kc3'
+        export SECRET_KEY='539c578978c2fed91113d896f1d6b09c17b8e473d4bc2254c9ba6c16a9568e3a'
+        export DEBUG=True
+        export JWT_SECRET_KEY='c457690c111152b57157e0fb'
+        export DATABASE_URL='postgres://ehxlysmxwjwuau:92a571a764b03a940c0946b3e958b214d63844444b5202e33d2ce579701e72e6@ec2-54-147-33-38.compute-1.amazonaws.com:5432/deshnrtleg1kc3'
         pytest
