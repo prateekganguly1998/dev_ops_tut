@@ -42,3 +42,7 @@ jobs:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
       run: |
         pytest
+    - name: Deploy with Heroku
+      env: 
+          HEROKU_APP_NAME: ${{secrets.HEROKU_APP_NAME}}
+          HEROKU_API_TOKEN: ${{secrets.HEROKU_API_TOKEN}}
